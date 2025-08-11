@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - MagnusMel</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+        }
+
+        .header h1 {
+            font-size: 2.8rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .header .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .effective-date {
+            background: rgba(102, 126, 234, 0.1);
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            font-weight: 500;
+            color: #667eea;
+        }
+
+        .nav-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(102, 126, 234, 0.1);
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            color: #667eea;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background: rgba(102, 126, 234, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .content {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+
+        .intro {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 40px;
+            padding: 25px;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+            border-radius: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #333;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(102, 126, 234, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section h2 .number {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+            color: #555;
+            text-align: justify;
+        }
+
+        .section ul {
+            margin: 15px 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .section li {
+            margin-bottom: 8px;
+            padding-left: 25px;
+            position: relative;
+            color: #555;
+        }
+
+        .section li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .highlight {
+            background: rgba(102, 126, 234, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 3px solid #667eea;
+            margin: 20px 0;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 40px;
+            border-top: 3px solid #667eea;
+        }
+
+        .contact-section h2 {
+            color: #333;
+            margin-bottom: 20px;
+            border: none;
+            justify-content: center;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #555;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 10px 20px;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.7);
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+        }
+
+        .strong-text {
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        .table-of-contents {
+            background: rgba(102, 126, 234, 0.05);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            border-left: 4px solid #667eea;
+        }
+
+        .table-of-contents h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .toc-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .toc-list li {
+            padding: 8px 0;
+        }
+
+        .toc-list li a {
+            color: #667eea;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .toc-list li a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .nav-link {
+                position: static;
+                margin-bottom: 20px;
+                display: inline-block;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .toc-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            opacity: 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .scroll-to-top.visible {
+            opacity: 1;
+        }
+
+        .scroll-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header fade-in">
+            <a href="index.html" class="nav-link">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
+            <h1>Privacy Policy</h1>
+            <p class="subtitle">MagnusMel</p>
+            <div class="effective-date">
+                <i class="fas fa-calendar-alt"></i>
+                Effective Date: August 11, 2025
+            </div>
+        </header>
+
+        <!-- Content -->
+        <div class="content fade-in">
+            <div class="intro">
+                <strong>MagnusMel</strong> ("we," "our," "us") operates the website <strong class="strong-text">https://magnusmel.github.io</strong> (the "Site"). This Privacy Policy explains how we handle information when you use our Site.
+            </div>
+
+            <!-- Table of Contents -->
+            <div class="table-of-contents">
+                <h3><i class="fas fa-list"></i> Table of Contents</h3>
+                <ul class="toc-list">
+                    <li><a href="#information-collect">1. Information We Collect</a></li>
+                    <li><a href="#how-we-use">2. How We Use Information</a></li>
+                    <li><a href="#cookies-tracking">3. Cookies & Tracking</a></li>
+                    <li><a href="#third-party">4. Third-Party Services</a></li>
+                    <li><a href="#data-sharing">5. Data Sharing</a></li>
+                    <li><a href="#data-retention">6. Data Retention</a></li>
+                    <li><a href="#your-rights">7. Your Rights</a></li>
+                    <li><a href="#security">8. Security</a></li>
+                    <li><a href="#policy-changes">9. Changes to This Policy</a></li>
+                    <li><a href="#contact">10. Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Section 1 -->
+            <section class="section" id="information-collect">
+                <h2>
+                    <span class="number">1</span>
+                    Information We Collect
+                </h2>
+                <p>We do not directly collect personal information from visitors unless you voluntarily provide it (e.g., via a contact form or email). However, certain non-personal information may be automatically collected, including:</p>
+                <ul>
+                    <li>Your IP address</li>
+                    <li>Browser type and version</li>
+                    <li>Pages visited and time spent</li>
+                    <li>Referring website</li>
+                </ul>
+                <div class="highlight">
+                    <strong>Note:</strong> This information may be collected automatically by our hosting provider (GitHub Pages) or analytics tools, if enabled.
+                </div>
+            </section>
+
+            <!-- Section 2 -->
+            <section class="section" id="how-we-use">
+                <h2>
+                    <span class="number">2</span>
+                    How We Use Information
+                </h2>
+                <p>We may use non-personal data for:</p>
+                <ul>
+                    <li>Improving the Site's content and performance</li>
+                    <li>Monitoring usage trends</li>
+                    <li>Maintaining security</li>
+                </ul>
+                <p>If you provide personal information, we will use it only for the purpose for which you provided it (e.g., responding to your inquiry).</p>
+            </section>
+
+            <!-- Section 3 -->
+            <section class="section" id="cookies-tracking">
+                <h2>
+                    <span class="number">3</span>
+                    Cookies & Tracking
+                </h2>
+                <p>Our Site may use cookies or similar technologies to improve user experience or for analytics purposes. You can adjust your browser settings to refuse cookies; however, some features may not function properly.</p>
+            </section>
+
+            <!-- Section 4 -->
+            <section class="section" id="third-party">
+                <h2>
+                    <span class="number">4</span>
+                    Third-Party Services
+                </h2>
+                <p>Our Site is hosted on <span class="strong-text">GitHub Pages</span>, which may collect and store server logs for operational and security purposes. If we use third-party services (e.g., Google Analytics, embedded content), they may collect information in accordance with their own privacy policies.</p>
+            </section>
+
+            <!-- Section 5 -->
+            <section class="section" id="data-sharing">
+                <h2>
+                    <span class="number">5</span>
+                    Data Sharing
+                </h2>
+                <p>We do not sell, rent, or trade personal information to third parties. We may disclose information if required by law or to protect our rights and security.</p>
+            </section>
+
+            <!-- Section 6 -->
+            <section class="section" id="data-retention">
+                <h2>
+                    <span class="number">6</span>
+                    Data Retention
+                </h2>
+                <p>Non-personal data may be retained for analytical and security purposes. Any personal information you provide will be kept only as long as necessary to fulfill its purpose.</p>
+            </section>
+
+            <!-- Section 7 -->
+            <section class="section" id="your-rights">
+                <h2>
+                    <span class="number">7</span>
+                    Your Rights
+                </h2>
+                <p>Depending on your location, you may have the right to:</p>
+                <ul>
+                    <li>Access and request a copy of the information we hold about you</li>
+                    <li>Request correction or deletion of your information</li>
+                    <li>Opt out of certain data collection practices</li>
+                </ul>
+            </section>
+
+            <!-- Section 8 -->
+            <section class="section" id="security">
+                <h2>
+                    <span class="number">8</span>
+                    Security
+                </h2>
+                <p>We take reasonable measures to protect information but cannot guarantee absolute security due to the nature of the internet.</p>
+            </section>
+
+            <!-- Section 9 -->
+            <section class="section" id="policy-changes">
+                <h2>
+                    <span class="number">9</span>
+                    Changes to This Policy
+                </h2>
+                <p>We may update this Privacy Policy from time to time. The updated version will be posted on this page with a revised "Effective Date."</p>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="contact-section" id="contact">
+                <h2>
+                    <i class="fas fa-envelope"></i>
+                    Contact Us
+                </h2>
+                <p>If you have questions about this Privacy Policy, please contact:</p>
+                <div class="contact-info">
+                    <a href="mailto:magnus.melwin@gmail.com" class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>magnus.melwin@gmail.com</span>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll to top functionality
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Fade-in animation on load
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.section, .header, .content');
+            
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(section);
+            });
+        });
+
+        // Highlight current section in navigation
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.section[id]');
+            const scrollPos = window.pageYOffset + 100;
+
+            sections.forEach(section => {
+                const top = section.offsetTop;
+                const height = section.offsetHeight;
+                const id = section.getAttribute('id');
+                const navLink = document.querySelector(`a[href="#${id}"]`);
+
+                if (scrollPos >= top && scrollPos < top + height) {
+                    document.querySelectorAll('.toc-list a').forEach(link => {
+                        link.style.fontWeight = 'normal';
+                        link.style.color = '#667eea';
+                    });
+                    if (navLink) {
+                        navLink.style.fontWeight = 'bold';
+                        navLink.style.color = '#764ba2';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
